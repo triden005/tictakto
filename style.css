@@ -1,0 +1,76 @@
+
+
+#special{
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+
+
+}
+#splash{
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+
+}
+#specialist{
+	border:2px solid black;
+	
+}
+.hblue td:hover{
+	background-color: steelblue;
+	opacity: 0.7;
+}
+.hred td:hover{
+	background: red;
+	opacity: 0.7;
+}
+.blue{
+	background: steelblue;
+}
+.red{
+	background-color: #e63c2e;
+}
+
+.nohover{
+    pointer-events: none;
+}
+
+
+
+
+body {
+ background-image: linear-gradient(to right, rgba(255,0,0,0.1), rgba(255,0,0,0.6))
+ 
+}
+h1 {
+	text-align: center;
+	margin: auto;
+/* 	margin-bottom: 25px; */
+	font-size: 40px;
+}
+table{
+	margin: auto;
+	margin-top: 25px;
+}
+
+td {
+	height: 100px;
+	width: 100px;
+	/*transition-delay: 1s;*/
+	transition: all 0.6s;
+
+}
+span{
+	height:0px;
+	text-align:center;
+	display: block;
+	width: 15%;
+	min-width: 100px;
+	font-size: 10px;
+	color: #3eba4f;
+	font-weight: 500;
+	margin :10px auto;
+
+	transition: all 0.8s;
+	
+	
+}
