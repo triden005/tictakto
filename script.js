@@ -27,7 +27,7 @@ for (var i=0;i<td.length ;i++){
 				}
 
 				turnchange();
-				console.log("change the turn "+turn);
+				// console.log("change the turn "+turn);
 				// console.log("clicked "+i);
 				control();
 
