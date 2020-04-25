@@ -3,6 +3,7 @@ console.log("my mega project");
 var td=document.querySelectorAll("td");
 var table=document.querySelector("table");
 var display=document.querySelector(".display");
+var resetbutton=document.querySelector("button");
 
 var turn=1;
 var blue=[];
@@ -27,8 +28,6 @@ for (var i=0;i<td.length ;i++){
 				}
 
 				turnchange();
-				// console.log("change the turn "+turn);
-				// console.log("clicked "+i);
 				control();
 
 			}
@@ -38,6 +37,7 @@ for (var i=0;i<td.length ;i++){
 
 	});
 }
+resetbutton.addEventListener("click",reset);
 
 function turnchange () {
 	table.classList.toggle("hblue");
@@ -53,17 +53,13 @@ function turnchange () {
 				console.log("its a draw");
 				gamecontrol=404;
 			}
-			else
-				console.log("gamegoing");
 		}
+	
 	}
 	else if(turn==6 || turn==8){
 		if(check(blue,blue.length)){
 			console.log("blue wins");
 			gamecontrol=432;
-		}
-		else{
-			console.log("game going");
 		}
 	
 	}
@@ -108,7 +104,8 @@ function control () {
 			console.log("draw");
 			display.textContent="its a draw!!"
 		}
-		transition(display);
+		display.classList.add("slidedown");
+		// transition(display);
 	}
 }
 
@@ -120,21 +117,15 @@ function reset(){
 		td[i].classList.remove("red");
 		td[i].classList.remove("blue");
 		td[i].classList.remove("nohover");
+	}
 		red=[];
 		blue=[];
 		turn=1;
 		gamecontrol=1;
-		display.textContent="         ";
-		display.style.heigth="0px";
-		display.style.fontSize="0px";
+		
+		display.classList.remove("slidedown");
+		display.textContent="";
+		
 
-	}
-}
-function transition(thing){
-	// for (var i = 10; i <=20; i++){
-		thing.style.fontSize=25+"px";
-		thing.style.height="20px";	
-	
-	// }
 
 }
