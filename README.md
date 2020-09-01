@@ -1,6 +1,6 @@
 # tictacto
 tictacto webpage
 ---
-https://github.com/triden005/tictakto
+https://triden005.github.io/tictakto/
 
 Basic tictacto using Javascript,Html & Css
